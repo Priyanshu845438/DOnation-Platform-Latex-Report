@@ -1,0 +1,76 @@
+\chapter{Literature Review}
+
+\section{Introduction}
+A literature review provides an overview of existing research, technologies, and systems related to online donation platforms. It helps identify the limitations of current solutions and highlights the need for an improved and more efficient system. This chapter explores various **existing donation platforms, payment gateways, role-based access control systems, and web technologies** that form the foundation of this project.
+
+\section{Existing Donation Platforms}
+Several digital donation platforms exist today, each with unique features and challenges. Some of the most notable ones include:
+
+\subsection{GoFundMe}
+GoFundMe is a widely used crowdfunding platform that allows individuals and organizations to raise funds for various causes. However, it primarily focuses on **individual fundraising campaigns** and lacks direct NGO support or verification mechanisms, leading to **transparency concerns**.
+
+\subsection{GiveIndia}
+GiveIndia is an online donation platform that connects donors with verified NGOs in India. While it ensures transparency, it operates under a **centralized model**, limiting customization and flexibility for NGOs.
+
+\subsection{GlobalGiving}
+GlobalGiving provides a marketplace for NGOs to post fundraising projects, allowing donors to choose where to contribute. Despite its wide reach, the platform **charges high fees** for transactions, reducing the final amount received by NGOs.
+
+\subsection{Limitations of Existing Platforms}
+\begin{itemize}
+    \item **Transparency Issues:** Many platforms lack real-time tracking of donations and fund utilization.
+    \item **High Transaction Fees:** Existing platforms often deduct significant fees, reducing the impact of contributions.
+    \item **Limited Role-Based Access:** Most platforms focus on donors and fundraisers but lack separate roles for NGOs, companies, and administrators.
+    \item **Security Concerns:** Some platforms do not implement strong authentication mechanisms, increasing the risk of fraud.
+\end{itemize}
+
+\section{Role-Based Access Control in Web Applications}
+Role-Based Access Control (RBAC) is essential in managing user permissions based on predefined roles. Several studies have emphasized the importance of RBAC in **ensuring security and efficient data access** in web applications.
+
+\subsection{Traditional Access Control Methods}
+\begin{itemize}
+    \item **Discretionary Access Control (DAC):** Users control permissions, but this leads to inconsistencies.
+    \item **Mandatory Access Control (MAC):** Centralized control, but lacks flexibility for dynamic web applications.
+    \end{itemize}
+    
+RBAC provides a structured approach where **Admin, NGOs, and Companies** have distinct permissions, ensuring better security and system management.
+
+\section{Online Payment Gateways for Donations}
+Secure and efficient transaction processing is a critical component of any online donation platform. The following payment gateways are commonly used for online donations:
+
+\subsection{PayPal}
+PayPal is a widely used international payment gateway, but it **charges high transaction fees** and is not optimized for NGO-specific donations.
+
+\subsection{Stripe}
+Stripe provides developer-friendly payment APIs but requires **complex integration for small NGOs**.
+
+\subsection{Cashfree}
+Cashfree is an **India-based** payment gateway that provides **low transaction fees, UPI support, and instant settlements**, making it a preferred choice for this project.
+
+\subsection{Key Features Required in a Payment Gateway}
+\begin{itemize}
+    \item **Low Transaction Fees:** Ensuring a higher percentage of donations reach the NGOs.
+    \item **Multi-Payment Support:** Allowing credit cards, UPI, and direct bank transfers.
+    \item **Secure Transactions:** Implementing SSL encryption and fraud detection.
+    \item **Instant Settlements:** Reducing the delay in fund availability for NGOs.
+\end{itemize}
+
+\section{Technology Stack for Web-Based Donation Platforms}
+Modern web applications require a **scalable and secure technology stack**. Various technologies have been analyzed to develop this donation platform.
+
+\subsection{Frontend Technologies}
+\begin{itemize}
+    \item **React.js:** A dynamic and scalable frontend framework for building user-friendly interfaces.
+    \item **Next.js:** Alternative to React for server-side rendering (considered but not implemented in this project).
+\end{itemize}
+
+\subsection{Backend Technologies}
+\begin{itemize}
+    \item **Node.js & Express.js:** Lightweight and scalable backend framework.
+    \item **Django:** Considered but not chosen due to its monolithic architecture.
+\end{itemize}
+
+\subsection{Database Management}
+\begin{itemize}
+    \item **MongoDB:** NoSQL database that allows flexible document-based storage.
+    \item **MySQL:** Alternative considered but not chosen due to schema restrictions.
+\end{itemize}

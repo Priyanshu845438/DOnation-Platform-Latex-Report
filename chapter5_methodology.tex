@@ -1,0 +1,104 @@
+\chapter{Methodology}
+
+\section{Introduction}
+This chapter outlines the structured approach followed in the development of the **Donation Platform with Payment Gateway**. The methodology consists of multiple phases, including **requirement gathering, system design, development, testing, and deployment**. The development follows the **Agile methodology**, ensuring iterative improvements and real-time feedback integration.
+
+\section{Research and Requirement Analysis}
+The first phase involved a **detailed analysis** of the problem statement and requirements of various stakeholders, including **NGOs, donors, and administrators**. A **comparative study of existing donation platforms** was conducted to identify gaps and areas for improvement.
+
+\subsection{Primary Data Collection}
+\begin{itemize}
+    \item Interviews with NGO representatives to understand their challenges.
+    \item Surveys among donors to analyze donation preferences and security concerns.
+    \item Review of payment gateway providers to choose the most reliable and secure integration.
+\end{itemize}
+
+\subsection{Secondary Data Collection}
+\begin{itemize}
+    \item Analysis of existing donation platforms such as **GoFundMe, Milaap, and Ketto**.
+    \item Research on secure online payment processing using **Cashfree Payment Gateway**.
+    \item Study of **MERN stack best practices** for scalable web applications.
+\end{itemize}
+
+\section{Software Development Methodology}
+The **Agile Software Development Lifecycle (SDLC)** was adopted, allowing iterative development with continuous improvements based on user feedback.
+
+\subsection{Phases of Agile SDLC}
+\begin{enumerate}
+    \item \textbf{Planning:} Defining system scope, identifying modules, and selecting appropriate technologies.
+    \item \textbf{Requirement Analysis:} Finalizing functional and non-functional requirements.
+    \item \textbf{Design:} Creating architectural diagrams, database schemas, and UI wireframes.
+    \item \textbf{Development:} Implementing features in **MERN stack**, ensuring modularity.
+    \item \textbf{Testing:} Conducting **unit testing, integration testing, and user acceptance testing (UAT)**.
+    \item \textbf{Deployment:} Hosting the platform on **cloud infrastructure** with security configurations.
+    \item \textbf{Maintenance & Enhancements:} Continuous monitoring, bug fixes, and feature upgrades.
+\end{enumerate}
+
+\section{System Implementation Approach}
+The implementation follows a **modular approach**, where different system components are developed independently and integrated later.
+
+\subsection{Backend Development (Node.js & Express.js)}
+\begin{itemize}
+    \item Implementation of **RESTful APIs** for authentication, campaign management, donations, and reporting.
+    \item Database modeling using **MongoDB**, ensuring efficient data storage and retrieval.
+    \item Integration of **JWT-based authentication** for secure access control.
+\end{itemize}
+
+\subsection{Frontend Development (React.js)}
+\begin{itemize}
+    \item UI development using **React.js and Material UI** for a responsive design.
+    \item API integration with backend services using **Axios**.
+    \item Role-based dashboards for **Admins, NGOs, and Donors**.
+\end{itemize}
+
+\subsection{Payment Gateway Integration}
+\begin{itemize}
+    \item Integration of **Cashfree Payment Gateway** for seamless transactions.
+    \item Implementation of **transaction tracking, status updates, and receipt generation**.
+    \item Secure handling of financial transactions using **encryption protocols**.
+\end{itemize}
+
+\subsection{Security Measures}
+\begin{itemize}
+    \item Implementation of **bcrypt** for password hashing.
+    \item Role-based access control (RBAC) for **Admin, NGO, and Donor** accounts.
+    \item Secure API endpoints using **JWT authentication**.
+\end{itemize}
+
+\section{Testing Strategy}
+To ensure the reliability of the system, multiple levels of testing were conducted:
+
+\subsection{Unit Testing}
+\begin{itemize}
+    \item Individual modules were tested using **Jest and Mocha**.
+    \item APIs were validated with **Postman** to check request-response consistency.
+\end{itemize}
+
+\subsection{Integration Testing}
+\begin{itemize}
+    \item Ensured proper interaction between **frontend and backend** components.
+    \item Verified secure data transmission during **user authentication and payment processing**.
+\end{itemize}
+
+\subsection{User Acceptance Testing (UAT)}
+\begin{itemize}
+    \item Conducted testing with a **focus group of NGOs and donors**.
+    \item Feedback collected for UI/UX improvements and security enhancements.
+\end{itemize}
+
+\section{Deployment and Maintenance}
+\subsection{Deployment Plan}
+The system was deployed using **cloud infrastructure**, ensuring high availability.
+
+\begin{itemize}
+    \item Backend deployed on **AWS EC2 / DigitalOcean**.
+    \item Frontend hosted on **Vercel / Netlify**.
+    \item Database hosted on **MongoDB Atlas**.
+\end{itemize}
+
+\subsection{Maintenance and Future Enhancements}
+\begin{itemize}
+    \item Continuous monitoring using **logging and analytics tools**.
+    \item Periodic security audits to detect vulnerabilities.
+    \item Future enhancements include **AI-based fraud detection for donations**.
+\end{itemize}

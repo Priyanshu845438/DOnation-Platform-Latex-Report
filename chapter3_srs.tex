@@ -1,0 +1,123 @@
+\chapter{System Requirements Specification}
+
+\section{Introduction}
+The System Requirements Specification (SRS) defines the functional and non-functional requirements for the **Donation Platform with Payment Gateway Integration**. This chapter outlines the system’s purpose, scope, user roles, and the detailed technical and operational requirements.
+
+\section{System Overview}
+The proposed system is a **MERN stack-based donation platform** that enables NGOs and companies to manage fundraising campaigns while allowing donors to contribute seamlessly. The system ensures **transparency, security, and efficiency** in handling donations.
+
+\subsection{Scope of the System}
+The system will provide:
+\begin{itemize}
+    \item Role-based access control for **Admin, NGOs, Companies, and Donors**.
+    \item Secure online donation processing via **Cashfree payment gateway**.
+    \item A campaign management system for NGOs to create and monitor donation drives.
+    \item A dashboard with real-time donation tracking and reporting.
+    \item Secure authentication using **JWT-based token system**.
+    \item A scalable backend API with **MongoDB database** for structured data storage.
+\end{itemize}
+
+\section{Functional Requirements}
+The functional requirements define the core features of the donation platform.
+
+\subsection{User Roles and Permissions}
+The system will support four types of users, each with distinct permissions.
+
+\begin{itemize}
+    \item \textbf{Admin}
+    \begin{itemize}
+        \item Manage users (approve/disable NGOs, Companies).
+        \item Manage and verify campaigns.
+        \item Access donation and activity reports.
+        \item Modify or delete campaigns in case of policy violations.
+    \end{itemize}
+
+    \item \textbf{NGOs}
+    \begin{itemize}
+        \item Register and manage NGO profile.
+        \item Create, update, and track donation campaigns.
+        \item Accept and manage received donations.
+        \item Access campaign reports and donor details.
+    \end{itemize}
+
+    \item \textbf{Companies}
+    \begin{itemize}
+        \item View NGO profiles and available campaigns.
+        \item Donate to campaigns and receive tax exemption receipts.
+        \item Access their donation history.
+    \end{itemize}
+
+    \item \textbf{Donors (Public Users)}
+    \begin{itemize}
+        \item Browse campaigns and make donations.
+        \item Get transaction receipts via email.
+        \item View donation impact reports.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Authentication and Security}
+\begin{itemize}
+    \item Users must register and log in using **email and password authentication**.
+    \item **JWT-based authentication** will be implemented for secure API access.
+    \item Passwords will be securely stored using **bcrypt hashing**.
+\end{itemize}
+
+\subsection{Campaign Management}
+\begin{itemize}
+    \item NGOs can **create, update, and delete** fundraising campaigns.
+    \item Each campaign must include **title, description, goal amount, end date, and images**.
+    \item Admin has the right to approve or reject campaigns.
+\end{itemize}
+
+\subsection{Payment Processing}
+\begin{itemize}
+    \item The platform will integrate the **Cashfree payment gateway** for secure transactions.
+    \item Donations can be made via **UPI, credit/debit cards, and net banking**.
+    \item Real-time tracking of donations and campaign progress will be available.
+\end{itemize}
+
+\subsection{Donation Reporting and Analytics}
+\begin{itemize}
+    \item NGOs and Admin can view donation reports with **amounts, donor details, and timestamps**.
+    \item Companies can generate reports for tax exemption purposes.
+    \item Campaign analytics will show the **funding progress, donor count, and trends**.
+\end{itemize}
+
+\section{Non-Functional Requirements}
+These requirements define system performance, security, and usability aspects.
+
+\subsection{Performance Requirements}
+\begin{itemize}
+    \item The system should handle **simultaneous transactions without downtime**.
+    \item Response time for critical actions (donations, logins) should be **under 2 seconds**.
+\end{itemize}
+
+\subsection{Security Requirements}
+\begin{itemize}
+    \item Secure communication using **HTTPS and SSL encryption**.
+    \item Protection against **SQL injection, CSRF, and XSS attacks**.
+    \item Regular **database backups** to prevent data loss.
+\end{itemize}
+
+\subsection{Usability Requirements}
+\begin{itemize}
+    \item A **mobile-responsive UI** for ease of access.
+    \item **Intuitive dashboard** for campaign tracking and donor insights.
+\end{itemize}
+
+\subsection{Scalability Requirements}
+\begin{itemize}
+    \item The system should support **thousands of concurrent users**.
+    \item The backend should be scalable using **Node.js and MongoDB cluster**.
+\end{itemize}
+
+\section{System Architecture Overview}
+The system follows a **MERN stack (MongoDB, Express.js, React.js, Node.js) architecture**.
+
+\begin{itemize}
+    \item **Frontend:** React.js for a dynamic UI.
+    \item **Backend:** Express.js (Node.js) for API handling.
+    \item **Database:** MongoDB for scalable document storage.
+    \item **Payment Gateway:** Cashfree for transaction processing.
+    \item **Authentication:** JWT for secure role-based access control.
+\end{itemize}

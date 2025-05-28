@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{report}
+
+% ------------------- Packages -------------------
+\usepackage{times}        % Use Times New Roman font
+\usepackage{graphicx}     % For including images
+\usepackage{amsmath, amssymb, mathtools} % Math symbols and formatting
+\usepackage{cite}         % Citation support
+\usepackage{hyperref}     % Hyperlinks for TOC and references
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2cm]{geometry} % Set margins
+\usepackage{fancyhdr}     % Header/Footer customization
+\usepackage{longtable, multirow, booktabs} % Tables
+\usepackage{xcolor}       % Colors for tables and text
+\usepackage{setspace}     % Line spacing
+\usepackage[final]{pdfpages} % For inserting PDFs
+\usepackage{algorithm2e}  % Algorithm formatting
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{fontenc}      % Encoding
+\usepackage{natbib}       % Harvard Referencing Style
+\bibliographystyle{agsm}  % Harvard Style
+
+% ------------- PDF Hyperlink Setup -------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=red
+}
+\urlstyle{same}
+
+% ------------- Header/Footer -------------
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[R]{\itshape\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand\headrulewidth{0pt} % Hide header rule
+
+% ------------------- Begin Document -------------------
+\begin{document}
+
+% Set numbering style for front matter (Roman numerals)
+\pagenumbering{roman}
+
+% ---------- Cover Page ----------
+\input{coverpage}
+\clearpage
+
+% ---------- Certificate Page ----------
+\input{certificate}
+\clearpage
+
+% ---------- Acknowledgments ----------
+\input{acknowledgments}  % Acknowledgments (if applicable)
+\clearpage
+
+% ---------- Abstract ----------
+\input{abstract}
+\clearpage
+
+% ---------- Table of Contents ----------
+\tableofcontents
+\clearpage
+
+% Set numbering style for main content (Arabic numerals)
+\pagenumbering{arabic}
+
+% ---------- Chapters ----------
+\input{chapter1_intro}        % Chapter 1: Introduction
+\clearpage
+\input{chapter2_lit}          % Chapter 2: Literature Review
+\clearpage
+\input{chapter3_srs}          % Chapter 3: System Requirements Specification
+\clearpage
+\input{chapter4_design}       % Chapter 4: System Design
+\clearpage
+\input{chapter5_methodology}  % Chapter 5: Methodology
+\clearpage
+\input{chapter6_imple}        % Chapter 6: Implementation
+\clearpage
+\input{results_discussion}    % Chapter 7: Results and Discussion
+\clearpage
+\input{evaluation}            % Chapter 8: Evaluation
+\clearpage
+\input{chapter7_concl}        % Chapter 9: Conclusion
+\clearpage
+\input{chapter8_futur}        % Chapter 10: Future Work
+\clearpage
+
+% ---------- Bibliography ----------
+\input{Bibliography}
+\clearpage
+
+\end{document}
